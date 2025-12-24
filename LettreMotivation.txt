@@ -1,0 +1,9 @@
+Objet : Candidature pour un stage d'un mois - {nom_entreprise}
+
+Madame, Monsieur,
+
+Actuellement étudiante en troisième année de licence en informatique, je suis à la recherche d’un stage universitaire d’une durée d’un mois, à effectuer dans le cadre de mon cursus académique. Passionnée par le développement web et les nouvelles technologies, je souhaite mettre mes compétences en pratique tout en approfondissant mes connaissances au sein de votre entreprise.
+Au cours de ma formation, j’ai acquis de solides bases en développement web, notamment en HTML, CSS, JavaScript, PHP ainsi qu’avec le framework Laravel. J’ai également eu l’occasion de travailler avec React pour le développement front-end. Ces compétences m’ont permis de réaliser plusieurs projets académiques et personnels, renforçant ainsi mon sens de l’organisation, ma rigueur et ma capacité à apprendre rapidement.
+Motivée, sérieuse et curieuse, je m’adapte facilement à de nouveaux environnements et j’apprécie le travail en équipe. Ce stage représente pour moi une opportunité précieuse de découvrir le monde professionnel, de développer mes compétences techniques et de contribuer, même modestement, aux projets de votre structure.
+Je serais honorée de pouvoir intégrer votre équipe et de vous apporter mon engagement et ma motivation. Je me tiens à votre disposition pour tout entretien ou information complémentaire.
+Je vous remercie par avance de l’attention portée à ma candidature et vous prie d’agréer, Madame, Monsieur, l’expression de mes salutations distinguées.

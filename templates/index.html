@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+</head>
+<body>
+
+    <main class="w-full min-h-screen bg-black flex items-center justify-center">
+        <section class="px-4 md:px-16 lg:px-24 xl:px-32 py-10 border-2 border-gray-700 flex items-center flex-col justify-center w-max rounded-lg">
+            <h3 class="text-3xl font-semibold text-white text-center mx-auto mt-4">Formulaire</h3>
+            <p class="text-slate-300 text-center mt-2 max-w-md mx-auto">Veuillez remplir le formulaire pour génerer votre lettre de motivation</p>
+
+            <form action="/generer" method="POST" class="grid sm:grid-cols-2 gap-3 sm:gap-5 max-w-2xl mx-auto text-slate-300 mt-16 w-full">
+                <div>
+                    <p class="mb-2 font-medium">Nom</p>
+                    <div class="flex items-center pl-3 rounded-lg overflow-hidden border border-slate-700 focus-within:border-red-600">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-user size-5" aria-hidden="true">
+                            <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="12" cy="7" r="4"></circle>
+                        </svg>
+                        <input placeholder="Votre nom" class="w-full p-3 bg-transparent outline-none" type="text" name="name" />
+                    </div>
+                </div>
+                <div>
+                    <p class="mb-2 font-medium">Entreprise</p>
+                    <div class="flex items-center pl-3 rounded-lg overflow-hidden border border-slate-700 focus-within:border-red-600">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-user size-5" aria-hidden="true">
+                            <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="12" cy="7" r="4"></circle>
+                        </svg>
+                        <input placeholder="Nom de l'entreprise" class="w-full p-3 bg-transparent outline-none" type="text" name="entreprise" />
+                    </div>
+                </div>
+                <div>
+                    <p class="mb-2 font-medium">Objet</p>
+                    <div class="flex items-center pl-3 rounded-lg overflow-hidden border border-slate-700 focus-within:border-red-600">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mail size-5" aria-hidden="true">
+                            <path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"></path>
+                            <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+                        </svg>
+                        <input placeholder="Objet" class="w-full p-3 bg-transparent outline-none" type="text" name="objet" />
+                    </div>
+                </div>
+                <div class="sm:col-span-2">
+                    <p class="mb-2 font-medium">Texte</p>
+                    <textarea name="texte" rows="8" placeholder="Le texte a mettre dans la lettre de motivation" class="focus:border-red-600 resize-none w-full p-3 bg-transparent outline-none rounded-lg overflow-hidden border border-slate-700"></textarea>
+                </div>
+                <button type="submit" class="w-max flex items-center gap-2 bg-red-700 hover:bg-pink-700 text-white px-10 py-3 rounded-full">
+                    Genérer
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right size-5" aria-hidden="true">
+                        <path d="M5 12h14"></path>
+                        <path d="m12 5 7 7-7 7"></path>
+                    </svg>
+                </button>
+            </form>
+        </section>
+    </main>
+</body>
+
+
+</html>

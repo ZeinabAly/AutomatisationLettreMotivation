@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lettre de Motivation</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="bg-white p-8">
+    
+    <div class="max-w-4xl mx-auto bg-white">
+        
+        <!-- En-tête avec ton nom -->
+        <div class="border-b-2 border-slate-800 pb-3 mb-8">
+            <h1 class="text-2xl font-bold text-slate-800">{{ nom }}</h1>
+            <p class="text-sm text-slate-600 mt-1">Téléphone | {{ email }} | Ville</p>
+        </div>
+        
+        <!-- Coordonnées entreprise -->
+        <div class="mb-6">
+            <p class="font-semibold text-slate-800">{{ entreprise }}</p>
+            <p class="text-sm text-slate-600">Adresse de l'entreprise</p>
+        </div>
+        
+        <!-- Date -->
+        <div class="text-right mb-8">
+            <p class="text-sm text-slate-600">Paris, le {{ date }}</p>
+        </div>
+        
+        <!-- Objet -->
+        <div class="mb-6">
+            <p class="font-bold text-slate-800">Objet : {{ objet }}</p>
+        </div>
+        
+        <!-- Corps de la lettre -->
+        <div class="space-y-4 text-justify leading-relaxed text-slate-800">
+            <p>Madame, Monsieur,</p>
+            
+            <div class="whitespace-pre-line">{{ texte }}</div>
+            
+            <p class="mt-8">Je reste à votre disposition pour un entretien afin de vous exposer plus en détail mes motivations et mes compétences.</p>
+            
+            <p class="mt-6">Je vous prie d'agréer, Madame, Monsieur, mes salutations distinguées.</p>
+        </div>
+        
+        <!-- Signature -->
+        <div class="mt-12 text-right">
+            <p class="font-semibold text-slate-800">{{ nom }}</p>
+        </div>
+        
+    </div>
+
+    <button id="telechargerPDF" onclick="telechargerPDF()" class="bg-red-700 hover:bg-pink-700 text-white px-8 py-3 rounded-full">
+        Télécharger en PDF
+    </button>
+
+
+    <style>
+        @media print{
+            #telechargerPDF{
+                display: none;
+            }
+        }
+    </style>
+
+    <script>
+    function telechargerPDF() {
+        window.print();
+    }
+    </script>
+</body>
+</html>
+
