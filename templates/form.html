@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/form.css') }}">
+    <title>Générateur de Lettre de Motivation</title>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Générateur de Lettre de Motivation</h1>
+            <p>Créez une lettre professionnelle en quelques clics</p>
+        </div>
+
+        <div class="form-container">
+            <form action="/generer" method="POST" id="letterForm">
+                
+                <!-- Sélection du style -->
+                <div class="form-section">
+                    <h2 class="section-title">Choisissez votre style</h2>
+                    <div class="style-selector">
+                        <input type="hidden" name="style" value="{{ style }}">
+                    </div>
+                </div>
+
+                <!-- Informations personnelles -->
+                <div class="form-section">
+                    <h2 class="section-title">Vos informations</h2>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="prenom">Prénom *</label>
+                            <input type="text" id="prenom" name="prenom" required placeholder="Jean">
+                        </div>
+                        <div class="form-group">
+                            <label for="nom">Nom *</label>
+                            <input type="text" id="nom" name="nom" required placeholder="DUPONT">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group form-group-full">
+                            <label for="adresse">Adresse complète *</label>
+                            <input type="text" id="adresse" name="adresse" required placeholder="15 rue de la République, 75001 Paris">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="email">Email *</label>
+                            <input type="email" id="email" name="email" required placeholder="jean.dupont@email.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="telephone">Téléphone *</label>
+                            <input type="tel" id="telephone" name="telephone" required placeholder="06 12 34 56 78">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="ville">Ville *</label>
+                            <input type="text" id="ville" name="ville" required placeholder="Paris">
+                        </div>
+                        <div class="form-group">
+                            <label for="date">Date *</label>
+                            <input type="text" id="date" name="date" required placeholder="31 janvier 2026">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Destinataire -->
+                <div class="form-section">
+                    <h2 class="section-title">Destinataire</h2>
+                    <div class="form-row">
+                        <div class="form-group form-group-full">
+                            <label for="entreprise">Nom de l'entreprise *</label>
+                            <input type="text" id="entreprise" name="entreprise" required placeholder="ACME Corporation">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group form-group-full">
+                            <label for="recruteur">Destinataire</label>
+                            <input type="text" id="recruteur" name="recruteur" placeholder="Madame la Directrice des Ressources Humaines">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Objet -->
+                <div class="form-section">
+                    <h2 class="section-title">Objet de la lettre</h2>
+                    <div class="form-row">
+                        <div class="form-group form-group-full">
+                            <label for="objet">Objet *</label>
+                            <input type="text" id="objet" name="objet" required placeholder="Candidature pour un stage en Data Science">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Corps de la lettre -->
+                <div class="form-section">
+                    <h2 class="section-title">Contenu de la lettre</h2>
+                    
+                    <div class="form-group">
+                        <label for="paragraphe1">Premier paragraphe : Présentation et motivation *</label>
+                        <textarea id="paragraphe1" name="paragraphe1" required placeholder="Présentez-vous brièvement et expliquez pourquoi vous postulez à ce poste dans cette entreprise..."></textarea>
+                        <div class="char-counter" id="counter1">0 caractères</div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="paragraphe2">Deuxième paragraphe : Compétences et expériences *</label>
+                        <textarea id="paragraphe2" name="paragraphe2" required placeholder="Mettez en avant vos compétences, votre parcours et vos réalisations pertinentes..."></textarea>
+                        <div class="char-counter" id="counter2">0 caractères</div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="paragraphe3">Troisième paragraphe : Conclusion et disponibilité *</label>
+                        <textarea id="paragraphe3" name="paragraphe3" required placeholder="Exprimez votre enthousiasme et proposez un entretien..."></textarea>
+                        <div class="char-counter" id="counter3">0 caractères</div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="formule_politesse">Formule de politesse (optionnel)</label>
+                        <textarea id="formule_politesse" name="formule_politesse" rows="2" placeholder="Par défaut : Je vous prie d'agréer, Madame, Monsieur, l'expression de mes salutations distinguées."></textarea>
+                    </div>
+                </div>
+
+                <!-- Boutons -->
+                <div class="btn-container">
+                    <button type="button" class="btn btn-secondary" onclick="resetForm()">Réinitialiser</button>
+                    <button type="submit" class="btn btn-primary">Générer le PDF</button>
+                </div>
+
+                <div class="preview-link">
+                    <a href="/preview/corporate" target="_blank">Voir un exemple de lettre</a>
+                </div>
+
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Compteurs de caractères
+        const textareas = ['paragraphe1', 'paragraphe2', 'paragraphe3'];
+        textareas.forEach((id, index) => {
+            const textarea = document.getElementById(id);
+            const counter = document.getElementById(`counter${index + 1}`);
+            
+            textarea.addEventListener('input', () => {
+                const count = textarea.value.length;
+                counter.textContent = `${count} caractères`;
+            });
+        });
+
+        // Fonction de réinitialisation
+        function resetForm() {
+            if (confirm('Êtes-vous sûr de vouloir réinitialiser le formulaire ?')) {
+                document.getElementById('letterForm').reset();
+                textareas.forEach((id, index) => {
+                    document.getElementById(`counter${index + 1}`).textContent = '0 caractères';
+                });
+            }
+        }
+
+        // Auto-save dans localStorage (optionnel)
+        const form = document.getElementById('letterForm');
+        const inputs = form.querySelectorAll('input, textarea');
+        
+        // Charger les données sauvegardées
+        inputs.forEach(input => {
+            const saved = localStorage.getItem(input.name);
+            if (saved && input.type !== 'radio') {
+                input.value = saved;
+            }
+        });
+
+        // Sauvegarder en temps réel
+        inputs.forEach(input => {
+            input.addEventListener('input', () => {
+                localStorage.setItem(input.name, input.value);
+            });
+        });
+
+        // Nettoyer le localStorage après soumission
+        form.addEventListener('submit', () => {
+            setTimeout(() => {
+                if (confirm('Formulaire envoyé ! Voulez-vous effacer les données sauvegardées ?')) {
+                    inputs.forEach(input => {
+                        localStorage.removeItem(input.name);
+                    });
+                }
+            }, 1000);
+        });
+    </script>
+</body>
+</html>

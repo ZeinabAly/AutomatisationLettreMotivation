@@ -1,0 +1,137 @@
+# Générateur de Lettres de Motivation - 3 Styles Modernes
+
+
+## Fonctionnalités
+
+- **3 styles professionnels** visuellement très distincts
+- **Génération PDF** haute qualité (format A4)
+- **Interface intuitive** avec formulaire moderne
+- **Prévisualisation** 
+- **Responsive design** (mobile, tablet, desktop)
+
+---
+
+## 🚀 Démarrage
+
+### Lancement de l'application
+
+```bash
+python automatisation.py
+```
+
+L'application sera accessible sur : **http://localhost:5000**
+
+### Structure du projet
+
+## Utilisation
+
+### 1. Accéder au formulaire
+
+Ouvrez votre navigateur et allez sur `http://localhost:5000`
+
+### 2. Remplir les informations
+
+- **Choisir un style** : Corporate, Startup ou Créatif
+- **Informations personnelles** : Nom, prénom, adresse, email, téléphone
+- **Destinataire** : Entreprise, recruteur
+- **Objet** : Poste visé
+- **Contenu** : 3 paragraphes de motivation
+
+### 3. Générer le PDF
+
+Cliquez sur "Générer le PDF" et téléchargez votre lettre !
+
+### 4. Prévisualisation 
+Survolez un template et cliquer sur voir 
+  **ou sur la page du formulaire**
+Utilisez le lien "Voir un exemple de lettre" pour prévisualiser chaque style.
+
+---
+
+### GET `/`
+Page d'accueil avec templates disponibles
+
+### GET `/form`
+Page du formulaire
+
+### GET `/preview/<style>`
+Prévisualisation d'un style (corporate, startup, creative)
+
+### POST `/generer`
+Génère et télécharge le PDF
+
+**Paramètres :**
+- `style` : corporate | startup | creative
+- `prenom`, `nom`, `adresse`, `email`, `telephone`
+- `ville`, `date`, `entreprise`, `recruteur`
+- `objet`, `paragraphe1`, `paragraphe2`, `paragraphe3`
+- `formule_politesse` (optionnel)
+
+
+---
+
+## Technologies utilisées
+
+- **Backend :** Flask 3.0
+- **Frontend :** HTML5, CSS3, JavaScript Vanilla
+- **Fonts :** Google Fonts
+- **Design :** CSS Grid, Flexbox, CSS Variables
+
+---
+
+## Cas d'usage
+
+### Étudiants
+Générez des lettres personnalisées pour vos candidatures de stage
+
+### Professionnels
+Créez des lettres de motivation adaptées à chaque secteur
+
+### Recruteurs / RH
+Proposez un outil à vos candidats pour améliorer leurs candidatures
+
+### Écoles / Universités
+Intégrez l'outil dans votre plateforme d'accompagnement carrière
+
+
+## Roadmap
+
+- [ ] Ajout d'un éditeur WYSIWYG
+- [ ] Templates pré-remplis par secteur
+- [ ] Export en Word (.docx)
+- [ ] Mode multi-langue (EN, ES, DE)
+- [ ] Système d'authentification
+- [ ] Sauvegarde cloud des lettres
+- [ ] Suggestions IA pour améliorer le contenu
+- [ ] Intégration LinkedIn pour auto-remplissage
+
+---
+
+## Contribution
+
+Les contributions sont les bienvenues !
+
+1. Fork le projet
+2. Créez votre branche (`git checkout -b feature/AmazingFeature`)
+3. Committez vos changements (`git commit -m 'Add some AmazingFeature'`)
+4. Push vers la branche (`git push origin feature/AmazingFeature`)
+5. Ouvrez une Pull Request
+
+
+
+## Auteur
+
+**Zéïnab Aly Camara**
+- GitHub: [@zeinabAly](https://github.com/votre-username)
+- Email: zeinabalycamara@gmail.com
+
+---
+
+
+##  Star ce projet
+
+Si ce projet vous a été utile, n'hésitez pas à lui donner une étoile 
+
+---
+
+**Créé avec pour faciliter vos candidatures**

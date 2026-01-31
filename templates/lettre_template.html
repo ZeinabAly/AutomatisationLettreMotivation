@@ -5,69 +5,102 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lettre de Motivation</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- <link rel="stylesheet" href="{{ url_for('static', filename='css/classique.css') }}"> -->
+    <!-- <link rel="stylesheet" href="{{ url_for('static', filename='css/' ~ template ~ '.css') }}"> -->
+     <!-- Google Fonts - chargées dynamiquement selon le style -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/' + style + '.css') }}">
+</head>
+
 </head>
 <body class="bg-white p-8">
     
-    <div class="max-w-4xl mx-auto bg-white">
-        
-        <!-- En-tête avec ton nom -->
-        <div class="border-b-2 border-slate-800 pb-3 mb-8">
-            <h1 class="text-2xl font-bold text-slate-800">{{ nom }}</h1>
-            <p class="text-sm text-slate-600 mt-1">Téléphone | {{ email }} | Ville</p>
-        </div>
-        
-        <!-- Coordonnées entreprise -->
-        <div class="mb-6">
-            <p class="font-semibold text-slate-800">{{ entreprise }}</p>
-            <p class="text-sm text-slate-600">Adresse de l'entreprise</p>
-        </div>
-        
-        <!-- Date -->
-        <div class="text-right mb-8">
-            <p class="text-sm text-slate-600">Paris, le {{ date }}</p>
-        </div>
-        
-        <!-- Objet -->
-        <div class="mb-6">
-            <p class="font-bold text-slate-800">Objet : {{ objet }}</p>
-        </div>
-        
-        <!-- Corps de la lettre -->
-        <div class="space-y-4 text-justify leading-relaxed text-slate-800">
-            <p>Madame, Monsieur,</p>
+    <div class="letter-wrapper">
+        <div class="letter-page">
             
-            <div class="whitespace-pre-line">{{ texte }}</div>
+            <!-- En-tête -->
+            <header class="letter-header">
+                <div class="sender-info">
+                    <h1 class="sender-name">{{ prenom }} {{ name }}</h1>
+                    <p class="sender-address">{{ adresse }}</p>
+                    <p class="sender-contact">{{ email }} | {{ telephone }}</p>
+                </div>
+                <div class="letter-meta">
+                    <p class="date-location">{{ ville }}, le {{ date }}</p>
+                </div>
+            </header>
+
+            <!-- Destinataire -->
+            <section class="recipient-section">
+                <p class="recipient-company">{{ entreprise }}</p>
+            </section>
+
+            <!-- Objet -->
+            <section class="subject-section">
+                <p><span class="subject-label">Objet :</span> {{ objet }}</p>
+            </section>
+
+            <section>
+                <p class="recipient-name">{{ recruteur }} , </p>
+            </section>
+
+            <!-- Corps de la lettre -->
+            <main class="letter-body">
+                <p class="paragraph">{{ paragraphe1 }}</p>
+                <p class="paragraph">{{ paragraphe2 }}</p>
+                <p class="paragraph">{{ paragraphe3 }}</p>
+            </main>
+
+            <!-- Signature -->
+            <footer class="letter-footer">
+                <p class="closing-formula">{{ formule_politesse|default("Je vous prie d'agréer, Madame, Monsieur, l'expression de mes salutations distinguées.") }}</p>
+                <p class="signature-name">{{ nom }}</p>
+            </footer>
             
-            <p class="mt-8">Je reste à votre disposition pour un entretien afin de vous exposer plus en détail mes motivations et mes compétences.</p>
-            
-            <p class="mt-6">Je vous prie d'agréer, Madame, Monsieur, mes salutations distinguées.</p>
         </div>
-        
-        <!-- Signature -->
-        <div class="mt-12 text-right">
-            <p class="font-semibold text-slate-800">{{ nom }}</p>
-        </div>
-        
     </div>
 
-    <button id="telechargerPDF" onclick="telechargerPDF()" class="bg-red-700 hover:bg-pink-700 text-white px-8 py-3 rounded-full">
-        Télécharger en PDF
-    </button>
 
+    <!-- Boutons -->
+    <div class="text-center mt-8 no-print">
+        <button onclick="window.print()" class="btnTelecharger">
+            Télécharger en PDF
+        </button>
+    </div>
 
     <style>
-        @media print{
-            #telechargerPDF{
-                display: none;
+        @media print {
+
+            /* Cache absolument tout */
+            body * {
+                visibility: hidden;
             }
+
+            /* Affiche uniquement la lettre */
+                .letter-page,
+                .letter-page * {
+                    visibility: visible;
+                }
+
+                /* Positionne la lettre proprement */
+                .letter-page {
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    width: 100%;
+                }
+
+                /* Supprime les boutons */
+                .no-print {
+                    display: none !important;
+                }
+
         }
     </style>
 
-    <script>
-    function telechargerPDF() {
-        window.print();
-    }
-    </script>
+    
 </body>
 </html>
-

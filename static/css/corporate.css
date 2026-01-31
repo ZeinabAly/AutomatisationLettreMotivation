@@ -1,0 +1,293 @@
+/* ===================================================================
+   STYLE 1 : MODERNE SOBRE / CORPORATE
+   ===================================================================
+   
+   Description :
+   Style minimaliste et professionnel pour recruteurs classiques, 
+   institutions, banques, cabinets de conseil. Design épuré avec 
+   typographie élégante et mise en page traditionnelle revisitée.
+   
+   Palette : Noir charbon, gris anthracite, accents or/champagne
+   Typographie : Crimson Text (serif élégant) + Source Sans 3 (sans-serif moderne)
+   Mise en page : Classique avec ligne verticale accent à gauche
+   
+   =================================================================== */
+
+/* Import des polices Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400&family=Source+Sans+3:wght@300;400;500;600&display=swap');
+
+/* ===================================================================
+   VARIABLES CSS
+   =================================================================== */
+:root {
+    /* Palette de couleurs */
+    --color-primary: #1a1a1a;          /* Noir charbon */
+    --color-secondary: #4a4a4a;        /* Gris anthracite */
+    --color-accent: #c9a961;           /* Or champagne */
+    --color-text: #2d2d2d;             /* Texte principal */
+    --color-text-light: #6b6b6b;       /* Texte secondaire */
+    --color-background: #ffffff;       /* Fond */
+    --color-border: #e5e5e5;           /* Bordures */
+    
+    /* Typographie */
+    --font-heading: 'Crimson Text', Georgia, serif;
+    --font-body: 'Source Sans 3', -apple-system, sans-serif;
+    
+    /* Espacements */
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 0.75rem;
+    --spacing-md: 1rem;
+    --spacing-lg: 1.5rem;
+    --spacing-xl: 2rem;
+    --spacing-2xl: 3rem;
+    
+    /* Tailles de police */
+    --font-size-name: 2.25rem;
+    --font-size-h2: 1.125rem;
+    --font-size-body: 1rem;
+    --font-size-small: 0.875rem;
+}
+
+/* ===================================================================
+   RESET & BASE
+   =================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-body);
+    font-size: var(--font-size-body);
+    line-height: 1.7;
+    color: var(--color-text);
+    background-color: #f5f5f5;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* ===================================================================
+   WRAPPER & PAGE
+   =================================================================== */
+.letter-wrapper {
+    /* min-height: 100vh; */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 2rem 1rem;
+}
+
+.letter-page {
+    width: 100%;
+    max-width: 21cm;
+    /* min-height: 29.7cm; */
+    background: var(--color-background);
+    padding: 1.5cm 2.5cm 1.5cm 3.5cm;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    position: relative;
+}
+
+/* Ligne d'accent verticale dorée à gauche */
+.letter-page::before {
+    content: '';
+    position: absolute;
+    left: 2.5cm;
+    top: 1.5cm;
+    bottom: 3cm;
+    width: 3px;
+    background: linear-gradient(
+        to bottom,
+        var(--color-accent) 0%,
+        var(--color-accent) 40%,
+        transparent 100%
+    );
+}
+
+/* ===================================================================
+   EN-TÊTE
+   =================================================================== */
+.letter-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--spacing-lg);
+    padding-bottom: var(--spacing-lg);
+    border-bottom: 1px solid var(--color-border);
+}
+
+.sender-info {
+    flex: 1;
+}
+
+.sender-name {
+    font-family: var(--font-heading);
+    font-size: var(--font-size-name);
+    font-weight: 700;
+    color: var(--color-primary);
+    letter-spacing: -0.02em;
+    margin-bottom: var(--spacing-sm);
+    line-height: 1.2;
+}
+
+.sender-address {
+    font-size: var(--font-size-small);
+    color: var(--color-text-light);
+    margin-bottom: var(--spacing-xs);
+    font-weight: 300;
+}
+
+.sender-contact {
+    font-size: var(--font-size-small);
+    color: var(--color-text-light);
+    font-weight: 400;
+}
+
+.letter-meta {
+    text-align: right;
+    margin-top: 0.25rem;
+}
+
+.date-location {
+    font-size: var(--font-size-small);
+    color: var(--color-text-light);
+    font-weight: 300;
+    font-style: italic;
+}
+
+/* ===================================================================
+   DESTINATAIRE
+   =================================================================== */
+.recipient-section {
+    margin-bottom: var(--spacing-xl);
+}
+
+.recipient-company {
+    font-family: var(--font-heading);
+    font-size: var(--font-size-h2);
+    font-weight: 600;
+    color: var(--color-primary);
+    margin-bottom: var(--spacing-xs);
+}
+
+.recipient-name {
+    padding-bottom: .5cm;
+    font-size: var(--font-size-body);
+    color: var(--color-secondary);
+    font-weight: 400;
+}
+
+/* ===================================================================
+   OBJET
+   =================================================================== */
+.subject-section {
+    margin-bottom: var(--spacing-xl);
+    padding-left: var(--spacing-md);
+    border-left: 3px solid var(--color-accent);
+}
+
+.subject-section p {
+    font-size: var(--font-size-body);
+    color: var(--color-text);
+    line-height: 1.6;
+}
+
+.subject-label {
+    font-weight: 600;
+    color: var(--color-primary);
+}
+
+/* ===================================================================
+   CORPS DE LA LETTRE
+   =================================================================== */
+/* .letter-body {
+    margin-bottom: var(--spacing-2xl);
+} */
+
+.letter-body .paragraph {
+    margin-bottom: var(--spacing-lg);
+    text-align: justify;
+    text-justify: inter-word;
+    color: var(--color-text);
+    line-height: 1.8;
+}
+
+.letter-body .paragraph:first-letter {
+    font-size: 1.5em;
+    font-weight: 600;
+    color: var(--color-accent);
+    float: left;
+    line-height: 1;
+    margin-right: 0.1em;
+    font-family: var(--font-heading);
+}
+
+/* ===================================================================
+   SIGNATURE
+   =================================================================== */
+/* .letter-footer {
+    margin-top: var(--spacing-2xl);
+} */
+
+.closing-formula {
+    font-size: var(--font-size-body);
+    color: var(--color-text);
+    margin-bottom: var(--spacing-lg);
+    line-height: 1.7;
+}
+
+.signature-name {
+    font-family: var(--font-heading);
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--color-primary);
+    margin-top: var(--spacing-lg);
+    font-style: italic;
+}
+
+/* ===================================================================
+   IMPRESSION / PDF
+   =================================================================== */
+@media print {
+    body {
+        background: white;
+    }
+    
+    .letter-wrapper {
+        padding: 0;
+    }
+    
+    .letter-page {
+        max-width: 100%;
+        box-shadow: none;
+        margin: 0;
+        padding: 2.5cm 2cm 2.5cm 3cm;
+    }
+    
+    .letter-page::before {
+        left: 2cm;
+        top: 2.5cm;
+        bottom: 2.5cm;
+    }
+}
+
+@page {
+    size: A4;
+    margin: 0;
+}
+
+.btnTelecharger{
+    background: #977016;
+    color: white;
+    padding-inline: 2rem;
+    padding-block: 1rem;
+    border-radius: 10px;
+    margin-inline: 1rem;
+    cursor: pointer;
+    transition: .4s;
+}
+
+.btnTelecharger:hover{
+    background: #af8013;
+    box-shadow: 2px 2px 10px #af8013a4;
+}

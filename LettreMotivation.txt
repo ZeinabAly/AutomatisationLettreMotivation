@@ -7,3 +7,42 @@ Au cours de ma formation, j’ai acquis de solides bases en développement web, 
 Motivée, sérieuse et curieuse, je m’adapte facilement à de nouveaux environnements et j’apprécie le travail en équipe. Ce stage représente pour moi une opportunité précieuse de découvrir le monde professionnel, de développer mes compétences techniques et de contribuer, même modestement, aux projets de votre structure.
 Je serais honorée de pouvoir intégrer votre équipe et de vous apporter mon engagement et ma motivation. Je me tiens à votre disposition pour tout entretien ou information complémentaire.
 Je vous remercie par avance de l’attention portée à ma candidature et vous prie d’agréer, Madame, Monsieur, l’expression de mes salutations distinguées.
+
+
+#### CAPGEMINI
+Actuellement étudiante en troisième année de licence en informatique à l'Université Pasquale Paoli de Corse, je suis à la recherche d'un stage universitaire d'une durée d'un mois, à effectuer entre 30 Mars et le 24 Avril dans le cadre de mon cursus académique. Passionnée par le développement web et les nouvelles technologies, je souhaite mettre mes compétences en pratique au sein de votre entreprise.
+
+C'est avec un vif intérêt que je souhaite rejoindre Capgemini, leader mondial du conseil et des services numériques. Votre expertise dans la transformation digitale, votre engagement envers l'innovation technologique et la diversité de vos projets correspondent parfaitement à mes aspirations professionnelles. L'opportunité de découvrir vos méthodologies de travail et de contribuer à vos projets représente pour moi une expérience formatrice inestimable.
+
+Au cours de ma formation, j'ai acquis de solides bases en développement web, notamment en HTML, CSS, JavaScript, PHP ainsi qu'avec le framework Laravel pour le back-end et React pour le front-end. J'ai notamment développé [exemple concret de projet], ce qui m'a permis d'approfondir ma maîtrise des technologies web modernes et de renforcer mon sens de l'organisation, ma rigueur et ma capacité à apprendre rapidement.
+
+Motivée, sérieuse et curieuse, je m'adapte facilement à de nouveaux environnements et j'apprécie particulièrement le travail en équipe. Ce stage représente pour moi une opportunité précieuse de découvrir le monde professionnel dans une entreprise de renom, de développer mes compétences techniques et de contribuer activement aux projets de vos équipes.
+
+Je serais honorée de pouvoir intégrer Capgemini et de vous apporter mon engagement, ma motivation et ma volonté d'apprendre. Je reste à votre entière disposition pour échanger lors d'un entretien et vous présenter plus en détail mes compétences et ma motivation.
+
+
+######
+
+Madame, Monsieur,
+
+Actuellement étudiante en troisième année de licence en informatique à l'Université Pasquale Paoli de Corse, je suis à la recherche d'un stage universitaire d'une durée d'un mois, à effectuer entre 30 Mars et le 24 Avril dans le cadre de mon cursus académique. Passionnée par le développement web et les nouvelles technologies, je souhaite mettre mes compétences en pratique au sein de votre entreprise.
+
+C'est avec un vif intérêt que je souhaite rejoindre Capgemini, leader mondial du conseil et des services numériques. Votre expertise dans la transformation digitale, votre engagement envers l'innovation technologique et la diversité de vos projets correspondent parfaitement à mes aspirations professionnelles. L'opportunité de découvrir vos méthodologies de travail et de contribuer à vos projets représente pour moi une expérience formatrice inestimable.
+
+Au cours de ma formation, j'ai acquis une solide maîtrise du développement web 
+fullstack. Côté back-end, je maîtrise PHP et Laravel, ainsi que Filament pour 
+la création de panels d'administration, Livewire pour la réactivité côté serveur, 
+et Alpine.js pour les interactions front-end légères. Côté front-end, je travaille 
+avec React, JavaScript, HTML et CSS. J'ai développé des sites web 
+concrets : mes projets React sont déployés et accessibles sur Vercel, tandis 
+que mes applications Laravel sont documentées sur GitHub (github.com/ZeinabAly). 
+Ces réalisations, qui incluent un site de restaurant (backend/frontend), site vitrine pour une entreprise, un site de recette de cuisine basée sur une api en React, 
+m'ont permis de maîtriser l'ensemble du cycle de développement web, de la 
+conception à la mise en production. Cette expérience pratique a renforcé mon 
+autonomie, ma rigueur et ma capacité à résoudre des problématiques techniques 
+variées.
+
+Motivée, sérieuse et curieuse, je m'adapte facilement à de nouveaux environnements et j'apprécie particulièrement le travail en équipe. Ce stage représente pour moi une opportunité précieuse de découvrir le monde professionnel dans une entreprise de renom, de développer mes compétences techniques et de contribuer activement aux projets de vos équipes.
+
+Je serais honorée de pouvoir intégrer Capgemini et de vous apporter mon engagement, ma motivation et ma volonté d'apprendre. Je reste à votre entière disposition pour échanger lors d'un entretien et vous présenter plus en détail mes compétences et ma motivation.
+
