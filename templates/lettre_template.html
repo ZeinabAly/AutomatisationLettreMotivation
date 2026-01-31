@@ -18,6 +18,13 @@
 </head>
 <body class="bg-white p-8">
     
+    <!-- Boutons -->
+    
+    <div class="btnTeleContent">
+        <button onclick="window.print()" class="btnTelecharger">
+            Télécharger en PDF
+        </button>
+    </div>
     <div class="letter-wrapper">
         <div class="letter-page">
             
@@ -64,13 +71,6 @@
     </div>
 
 
-    <!-- Boutons -->
-    <div class="text-center mt-8 no-print">
-        <button onclick="window.print()" class="btnTelecharger">
-            Télécharger en PDF
-        </button>
-    </div>
-
     <style>
         @media print {
 
@@ -97,8 +97,16 @@
                 .no-print {
                     display: none !important;
                 }
-
-        }
+                
+            }
+            .btnTeleContent{
+                width: 100%;
+                max-width: 21cm;
+                margin: auto;
+                display: flex;
+                justify-content: end;
+                margin-top: 2rem;
+            }
     </style>
 
     

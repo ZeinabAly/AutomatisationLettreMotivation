@@ -411,7 +411,6 @@ body {
     padding-inline: 2rem;
     padding-block: 1rem;
     border-radius: 10px;
-    margin-inline: 1rem;
     cursor: pointer;
     transition: .4s;
 }

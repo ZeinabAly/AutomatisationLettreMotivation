@@ -41,12 +41,12 @@ def preview_style(style):
     
     # Données d'exemple
     data_exemple = {
-        'prenom': 'Marie',
-        'name': 'DUPONT',
-        'adresse': '15 rue de la République, 75001 Paris',
-        'email': 'marie.dupont@email.com',
+        'prenom': 'Zéïnab Aly',
+        'name': 'CAMARA',
+        'adresse': 'Quartier de la gare, résidence central fac, Corte',
+        'email': 'zeinabaly@email.com',
         'telephone': '06 12 34 56 78',
-        'ville': 'Paris',
+        'ville': 'Corte',
         'date': '31 janvier 2026',
         'entreprise': 'ACME Corporation',
         'recruteur': 'Madame la Directrice des Ressources Humaines',
@@ -55,7 +55,7 @@ def preview_style(style):
         'paragraphe2': 'Mon parcours académique m\'a permis de développer une solide expertise en Python, en analyse de données et en modélisation prédictive. Lors de mon précédent stage chez DataTech, j\'ai contribué au développement d\'un modèle de prédiction des ventes qui a amélioré la précision des prévisions de 15%. Cette expérience m\'a également sensibilisée aux enjeux business de la data science.',
         'paragraphe3': 'Passionnée par les défis techniques et dotée d\'un excellent esprit d\'équipe, je suis convaincue que je pourrais apporter une réelle valeur ajoutée à vos projets. Je serais ravie de pouvoir échanger avec vous sur les opportunités de collaboration.',
         'formule_politesse': 'Je vous prie d\'agréer, Madame, Monsieur, l\'expression de mes salutations distinguées.',
-        'nom': 'Marie DUPONT'
+        'nom': 'Zéïnab Aly CAMARA'
     }
     
     return render_template('lettre_template.html', **data_exemple, style=style, preview=True)

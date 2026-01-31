@@ -339,17 +339,16 @@ body {
 }
 
 .btnTelecharger{
-    background: #a90823;
+    background: var(--color-primary);
     color: white;
     padding-inline: 2rem;
     padding-block: 1rem;
     border-radius: 10px;
-    margin-inline: 1rem;
     cursor: pointer;
     transition: .4s;
 }
 
 .btnTelecharger:hover{
-    background: #801023;
+    background: var(--color-primary-dark);
     box-shadow: 2px 2px 10px #8010233c;
 }
