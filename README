@@ -16,7 +16,7 @@
 ### Lancement de l'application
 
 ```bash
-python automatisation.py
+python app.py
 ```
 
 L'application sera accessible sur : **http://localhost:5000**

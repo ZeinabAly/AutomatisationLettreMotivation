@@ -10,10 +10,7 @@ Version: 1.0.0
 """
 
 from flask import Flask, render_template, request, send_file, jsonify, abort
-# from weasyprint import HTML, CSS
 from datetime import datetime
-import os
-import logging
 
 # Configuration de l'application
 app = Flask(__name__)
